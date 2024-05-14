@@ -16,13 +16,13 @@ function setup() {
 
 function draw() {
   background(c);
+  
   fill (255-red(c),255-green(c),255-blue(c));
-  ellipse(x,y,d,d);
-  d+=v*dir;
+  ellipse(x,y,d,d); // ellipse (xc,yc,do,dv)
+  d+=v*dir; // Cambia la dimensione
   if(d<=0 || y>=width-d/2) {
     c=color(random(255),random(255),random(255));
     dir=-dir;
   } 
 }
 
-// ellipse (xc, yc, do, dv)

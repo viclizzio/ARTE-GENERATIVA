@@ -3,7 +3,7 @@ var y;
 var d=50;
 
 function setup() {
-  createCanvas(400,400);
+  createCanvas(600,600);
   x=width/2;
   y=height/2;
   noStroke();

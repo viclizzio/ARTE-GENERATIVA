@@ -15,14 +15,11 @@ function setup() {
 function draw() {
   background (255, map (y,0,height,0,255),0);
   line (100,y,200,y);
-  y+=v*dir;
+  y+=v*dir; // Permette alla linea di scendere in verticale
 
-  // if(y!=height-20){y++} vuol dire "Se (non tocchi height) {ti muovi}" funziona, ma non si può usare in tutti i casi (?)
-  if (y<=0 || y>=height) {
-    dir=-dir;
-  }
+  if (y<=0 || y>=height) {dir=-dir;} // Permette alla linea di sbattere in basso e poi in alto
 }
 
-// && = and, || = or, ! = not
+// &&=and, ||=or, !=not
 
 // map (what, start input, end input, start output, end output)

@@ -9,8 +9,8 @@ function setup() {
 
 function draw() {
   background (0,0,0,50);
+
   circle (x,height/2,d);
   x=x+v; // Versione contratta: x+=v, solamente per x=x+1 possiamo scrivere anche x++.
-  if (x==width-d/2){ 
-  v=0 } // Se (il cerchio sta a destra)
+  if (x==width-d/2){v=0} // Se (il cerchio sta a destra)
 }
