@@ -19,7 +19,7 @@ function draw() {
 
   //rettangolo
   fill (0,255,0); 
-  rect (width/2, height/2, 100, 100, 20); // A rect (x,y,w,h), si può aggiungere un quinto paramentro per il border radius, fino ad otto se si vogliono modificare singolarmente.
+  rect (width/2, height/2, 80, 80, 20); // A rect (x,y,w,h), si può aggiungere un quinto paramentro per il border radius, fino ad otto se si vogliono modificare singolarmente.
 
   //cerchio
   fill (255,100,100);
