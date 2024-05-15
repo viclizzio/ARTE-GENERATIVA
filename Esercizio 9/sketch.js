@@ -1,15 +1,27 @@
-var s=0;
-var l=100;
+var x;
+var y;
+var d=100;
+var cb=0;
+var c;
 
 function setup() {
-  createCanvas(400,400);
-  rectMode (CENTER);
+  createCanvas (400,400);
+  x=random(d/2,width-d/2);
+  y=random(d/2,height-d/2);
+  c=color(random(255),random(255),random(255));
+  noStroke ();
 }
 
 function draw() {
-  background (0);
+  background (cb);
+  fill (c);
+  ellipse (x,y,d,d);
 
-  fill (map(mouseY,0,height,0, 255),255,0); // Colore che cambia quando si sposta il mouse
-  s=map (mouseX,0,width, 0,l/2); // Fa si che al passaggio del mouse il quarato diventi un cerchio
-  rect (width/2, height/2, l, l, s);
+  if (dist(mouseX,mouseY,x,y)<d/2) {
+    cb=255;
+  }
+
+  else {
+    cb=0;
+  }
 }
