@@ -21,6 +21,7 @@ function draw() {
     cb=255;
   }
 
+  // Permette che al passaggio del mouse dentro il cerchio, cambi il colore di sfondo
   else {
     cb=0;
   }
