@@ -1,20 +1,20 @@
-var x=0;
+var l=20;
 var v=5;
-var dir=1;
+var c=255;
 
 function setup(){
   createCanvas(400,400);
-  strokeWeight(2
-  );
+  c=color(random(255),random(255),random(255))
 }
 
 function draw() {
   background (0);
 
-  stroke (255, 255, 0);
-  line (width/2,0,x,height);
-  stroke (0, 255, 255);
-  line (width/2,height,width-x,0);
-  x+=v*dir;
-  if(x<0 || x>width){dir=-dir;}
+  fill (c);
+  rect (0,0,l);
+  l+=v;
+  if(l>=width){
+    c=color(random(255),random(255),random(255));
+    l=20;
+  }
 }
