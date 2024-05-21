@@ -1,8 +1,14 @@
+var a=0;
+
 function setup(){
   createCanvas (499,400);
 }
 
 function draw() {
   background (0);
-  arc (width/2, height/2, 150, 150, 0, PI);
+  stroke(255,130,210);
+  strokeWeight(5);
+  arc (width/2, height/2, 150, 150, HALF_PI, radians(a), PIE); //*CHORD*/
+  a++;
+  fill(a%255, 50, 100);
 }
