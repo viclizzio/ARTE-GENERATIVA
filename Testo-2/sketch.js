@@ -3,20 +3,23 @@ var scritto="";
 var f;
 var d=1;
 var a=false;
+
 function preload(){
     f=loadFont("./assets/testobello.ttf");
-
 }
+
 function setup(){
     createCanvas(500,500);
-
 }
+
 function draw(){
     background(0,50);
+
     textFont("Arial");
     textSize(30);
     fill(255);
-    text("insersci il testo: "+scrivendo,20, 40);
+    text("Inserisci il testo: " +scrivendo, 20, 40);
+
     if(a){
         textFont(f);
         textSize(d);
@@ -26,7 +29,7 @@ function draw(){
             a=false;
         }
     }
-
+}
 
 function keyPressed(){
     if(keyCode==32 || keyCode>=48){
@@ -38,5 +41,7 @@ function keyPressed(){
         a=true;
         d=1;
     }
-  
+    else if (keyCode==8){
+        scrivendo=scrivendo.substring(0,scrivendo.lenght-1);
+    }
 }
