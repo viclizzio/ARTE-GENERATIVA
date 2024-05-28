@@ -1,4 +1,9 @@
 var t="ABACATANIA è la migliore accademia di via franchetti";
+var f;
+
+function preload(){
+  f=loadFont("./assets/testobello.ttf");
+}
 
 function setup() { 
   createCanvas (500,500);
