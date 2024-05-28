@@ -1,7 +1,7 @@
 var i;
 
 function preload(){
-    i=loadImage("../assets/gigi.png)");
+    i=loadImage("./assets/gigi.png)");
 }
 
 function setup(){
