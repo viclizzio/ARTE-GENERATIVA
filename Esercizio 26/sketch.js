@@ -15,6 +15,7 @@ function draw() {
 
   fill (255);
   textSize (50);
+  textFont (f);
   stroke (255,0,0);
   strokeWeight (3);
   textAlign (CENTER,CENTER);
