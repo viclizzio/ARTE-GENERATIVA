@@ -8,19 +8,21 @@ function setup(){
 
 function draw(){
     background (0);
-
-    push ();
-    translate (100,100);
-    rotate (radians(a));
-
+    
     fill (255,255,0);
-    rect (0,0,50,50,10);
-    pop ();
-   
-    push ();
-    translate (200,100);
-    rotate (radians(2*a));
+    translate (width/2, height/2);
+    rotate (radians(a));
+    rect (0,0,80,80);
+    
     fill (0,255,255);
-    rect (0,0,50,50,10);
-    a+=3;
+    translate (150,0);
+    rotate (radians(2*a));
+    rect (0,0,50,50);
+
+    fill (200);
+    translate (80,0);
+    rotate (radians(-4*a));
+    rect (0,0,20,20);
+
+    a+=2;
 }
