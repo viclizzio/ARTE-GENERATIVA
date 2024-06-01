@@ -25,7 +25,7 @@ function draw(){
    // figure
    if (x>width/2){
       cont++;
-      c=color(random(255),random(255),random(255));
+      c=color (random(255),random(255),random(255));
    }
    if (cont%4==0){
       ellipse (width/2,height/2, 60,60);
@@ -52,7 +52,5 @@ function draw(){
    
    if (x<0 || x>width/2){
       dir=-dir;
-   }
-   
-   
+   } 
 }
