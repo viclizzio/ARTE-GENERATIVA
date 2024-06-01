@@ -7,6 +7,7 @@ function setup() {
 
 function draw() {
   background(random(p));
+  
   for(var i=0;i<10;i++){
     rect(random(width),random(height),60,20)
   }

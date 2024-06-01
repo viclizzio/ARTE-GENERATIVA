@@ -29,6 +29,7 @@ function draw() {
 
     if(dir[i]==1){
       triangle(x[i],y[i],x[i]+20,y[i]+10,x[i],y[i]+20);
+
       ellipse(x[i]+40,y[i]+10,40,20);
 
       if(x[i]>width){
@@ -43,6 +44,7 @@ function draw() {
 
     else{
       triangle(x[i],y[i],x[i]-20,y[i]+10,x[i],y[i]+20);
+      
       ellipse(x[i]-40, y[i]+10,40,20);
 
       if(x[i]<0){

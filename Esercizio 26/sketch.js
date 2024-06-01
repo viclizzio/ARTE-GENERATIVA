@@ -13,6 +13,11 @@ function setup() {
 function draw() {
   background (0);
 
+  strokeWeight (2);
+  stroke (0,255,0);
+  line (width/2, 0, width/2, height);
+  line (0, height/2, width, height/2);
+  
   fill (255);
   textSize (50);
   textFont (f);
@@ -21,8 +26,5 @@ function draw() {
   textAlign (CENTER,CENTER);
   text (t, 0, 0, width, height);
 
-  strokeWeight (2);
-  stroke (0,255,0);
-  line (width/2, 0, width/2, height);
-  line (0, height/2, width, height/2);
+  
 }

@@ -5,55 +5,62 @@ var g=0;
 var b=0;
 var v=3;
 var dir=1; 
-var bg=0;
+var bc=0;
 var bott=true;
 
 function setup() { 
   createCanvas (500, 500);
+
   d=width/q;
+
   noStroke();
-  //colorMode(RGB, 255); 
+
+  // colorMode(RGB, 255); 
 }
 
 function draw() {
-  background(bg);
-  bg+=v*dir
+  background (bc);
 
-  if(bg<=0 || bg>=255){
+  // sfondo
+  bc+=v*dir
+
+  if (bc<=0 || bc>=255){
     dir=-dir
-
   }
     
-  for(var y=d/2; y<height; y+=d){ //ripetitore di riga
-    for(var x=d/2; x<=width; x+=d){ //generatore di riga o riplecatore di riga
-      r=map(x, d/2, width-d/2, 0, 255);
-      g=map(y, d/2, width-d/2, 0, 255);
+  // pallini 
+  for (var y=d/2; y<height; y+=d){ // ripetitore di riga
+    for(var x=d/2; x<=width; x+=d){ // generatore di riga
+      r=map(x, d/2,width-d/2, 0,255);
+      g=map(y, d/2,width-d/2, 0,255);
 
-      if(dist(x, y, mouseX, mouseY)<d/2){
+      if (dist(x,y, mouseX,mouseY)<d/2){
         b=255;
       }
+      
       else{
         b=0;
       }
 
-    fill(r, g, b);
-    ellipse(x+random(-3, 3), y+random(-3, 3), d, d)
+    fill (r,g,b);
+    ellipse (x+random(-3,3), y+random(-3,3),d,d)
     } 
   }
 }
  
-function mousePressed(){ //funzione per quando bisogna utilizzare la funzione del click del mouse 
+function mousePressed(){ // funzione per quando bisogna utilizzare la funzione del click del mouse 
    
-  if(mouseButton==LEFT){
+  if (mouseButton==LEFT){
     bott=!bott; 
    }
     
-  if(bott){
+  if (bott){
     loop();
   }
-   else{
+
+  else{
     noLoop();
-   }
+  }
 }
 
 /*function mouseReleased(){ 

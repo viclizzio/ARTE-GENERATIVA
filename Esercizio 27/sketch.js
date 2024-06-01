@@ -35,12 +35,14 @@ function keyPressed(){
     if(keyCode==32 || keyCode>=48){
         scrivendo+=key;
     }
+
     if(keyCode==13){
         scritto=scrivendo;
         scrivendo="";
         a=true;
         d=1;
     }
+    
     else if (keyCode==8){
         scrivendo=scrivendo.substring(0,scrivendo.lenght-1);
     }

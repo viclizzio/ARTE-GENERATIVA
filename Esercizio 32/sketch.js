@@ -4,15 +4,17 @@ var dir=-1;
 var c=255;
 var cont=0;
 var imm;
+
 function preload(){
    imm=loadImage("./files/sailor.png");
 }
+
 function setup(){
    createCanvas(600,400);
    rectMode(CORNERS);
    x=width/2;
-
 }
+
 function draw(){
    background(0);
 
@@ -38,9 +40,11 @@ function draw(){
    rect(width-x,0,width,height);
    
    x+=v*dir;
+   
    if(x<0 || x>width/2){
       dir=-dir;
    }
+
    if(x>width/2){
       cont++;
       c=color(random(255), random(255), random(255));

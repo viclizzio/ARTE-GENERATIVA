@@ -5,7 +5,8 @@ var st=0;
 var v=5;
 
 function setup(){
-    createCanvas(600,400);
+    createCanvas(400,400);
+    
     x=d/2;
     y=d/2;
 }
@@ -17,6 +18,7 @@ function draw(){
 
     if(st==0){
         x+=v;
+
         if(x>width-d/2){
             st=1;
         }
@@ -24,6 +26,7 @@ function draw(){
 
     if(st==1){
         y+=v;
+
         if(y>height-d/2){
             st=2;
         }
@@ -31,6 +34,7 @@ function draw(){
 
     if(st==2){
         x-=v;
+
         if(x<d/2){
             st=3;
         }
@@ -38,6 +42,7 @@ function draw(){
 
     if(st==3){
         y-=v;
+        
         if(y<d/2){
             st=0;
         }

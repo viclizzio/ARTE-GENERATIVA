@@ -21,6 +21,7 @@ function draw(){
     c=get(mouseX-1, mouseY-1);
 
     background(0) // per muoverlo con il mouse (i.get(mouseX, mouseY)); //togliere background per gigi infiniti
+    
     image (i,0,0); // per muoverlo con il mouse (i, mouseX, mouseY);
     p=i2.get(mouseX, mouseY, 150, 150);
     image (p, mouseX, mouseY);
