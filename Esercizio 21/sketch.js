@@ -20,12 +20,12 @@ function setup() {
 function draw() {
   background (b);
 
-  if(mouseX>x && mouseX<x+w && mouseY>y && mouseY<y+h){
+  if (mouseX>x && mouseX<x+w && mouseY>y && mouseY<y+h){
       stroke(255);
       fill(cs);
     }
 
-  else{
+  else {
     noStroke();
     fill(c);
   }

@@ -2,7 +2,6 @@ var t="ABACATANIA";
 
 function setup() { 
   createCanvas (500,500);
-
 }
 
 function draw() {
@@ -18,6 +17,4 @@ function draw() {
   stroke (255,0,0);
   strokeWeight (3);
   text (t, width/2-textWidth(t)/2, height/2);
-
-  
 }

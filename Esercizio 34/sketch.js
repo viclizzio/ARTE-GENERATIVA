@@ -17,40 +17,40 @@ function setup(){
 function draw(){
   background(255);
 
-  fill(r,g,b);
-  ellipse(x,y,d,d);
+  fill (r,g,b);
+  ellipse (x,y,d,d);
 
-  if(st==0){
+  if (st==0){
     x+=v;
     y+=v;
 
-    if(x>=width/2){
+    if (x>=width/2){
       st++;
     }
   }
 
-  if(st==1){
+  if (st==1){
     d++;
 
-    if(d>100){
+    if (d>100){
       st++;
     }
   }
 
-  if(st==2){
+  if (st==2){
     r--;
     g--;
     b++;
 
-    if(b>255){
+    if (b>255){
       st++;
     }
   }
   
-  if(st==3){
+  if (st==3){
     y+=v;
     
-    if(y>=height-d/2){
+    if (y>=height-d/2){
       v=0;
     }
   }

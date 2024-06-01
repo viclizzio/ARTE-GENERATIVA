@@ -5,38 +5,40 @@ var d=1;
 var a=false;
 
 function preload(){
-    f=loadFont("./assets/testobello.ttf");
+    f=loadFont ("./assets/testobello.ttf");
 }
 
 function setup(){
-    createCanvas(500,500);
+    createCanvas (500,500);
 }
 
 function draw(){
-    background(0,50);
+    background (0,50);
 
-    textFont("Arial");
-    textSize(30);
-    fill(255);
-    text("Inserisci il testo: " +scrivendo, 20, 40);
+    textFont ("Arial");
+    textSize (30);
+    fill (255);
+    text ("Inserisci il testo: " +scrivendo, 20, 40);
 
-    if(a){
-        textFont(f);
-        textSize(d);
-        text(scritto, width/2-textWidth(scritto)/2, height/2);
+    if (a){
+        textFont (f);
+        textSize (d);
+        text (scritto, width/2-textWidth(scritto)/2, height/2);
+
         d++;
-        if(textWidth(scritto)>width-10){
+
+        if (textWidth(scritto)>width-10){
             a=false;
         }
     }
 }
 
 function keyPressed(){
-    if(keyCode==32 || keyCode>=48){
+    if (keyCode==32 || keyCode>=48){
         scrivendo+=key;
     }
 
-    if(keyCode==13){
+    if (keyCode==13){
         scritto=scrivendo;
         scrivendo="";
         a=true;

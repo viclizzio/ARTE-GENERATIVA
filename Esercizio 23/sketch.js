@@ -11,7 +11,7 @@ var ve=0;
 function setup() { 
   createCanvas (500,500);
 
-  for(var i=0;i<q;i++){
+  for(var i=0; i<q; i++){
     x[i]=random(-100,width-w);
     y[i]=random(-200,height-h);
     c[i]=random(p);
