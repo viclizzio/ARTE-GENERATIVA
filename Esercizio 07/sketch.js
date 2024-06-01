@@ -3,7 +3,9 @@ function setup() {
 }
 
 function draw() {
-  strokeWeight(random (1,25));
-  stroke (random (255),random (255),random (255),50);
-  line (random (width),random (height),random (width),random (height));
+  strokeWeight (random(1,20));
+
+  stroke (random(255),random(255),random(255), 50);
+
+  line (random(width),random(height), random(width),random(height));
 }

@@ -1,16 +1,21 @@
-var x=10;
-var y=250;
+var x;
+var y;
 var r=0;
 var g=0;
 
 function setup(){
-  createCanvas (500,500);
+  createCanvas (600,600);
 }
 
 function draw() {
-  background (r,g,255);
+  background (r,g,0);
+  
+  r= map(mouseX, 0,width, 0,255);
+  g= map(mouseY, 0,height, 0,255);
+
   fill (255-r, 255-g, 0);
-  beginShape();
+
+  beginShape(); // Crea una forma
     vertex (x,y);
     vertex (x+35,y-130);
     vertex (x+60,y-90);
@@ -23,6 +28,4 @@ function draw() {
   x=mouseX;
   y=mouseY;
 
-  r=map(mouseX, 0, width, 0, 255);
-  g=map(mouseY, 0, height, 0, 255);
 }
