@@ -26,24 +26,24 @@ function draw(){
 function damiano(){
   for (var y=0;y<height;y+=s){
     for (var x=0;x<width;x+=s){
-      fill(random(colori));
+      fill (random(colori));
 
       m=random(100);
 
       if (m<25){
-       arc(x+s,y+s,s,s,radians(180),radians(270));
+       arc (x+s,y+s,s,s,radians(180),radians(270));
       }
 
       else if (m<50){
-       arc(x,y+s,s,s,radians(270),radians(360));
+       arc (x,y+s,s,s,radians(270),radians(360));
       }
       
       else if (m<75){
-        arc(x,y,s,s,0,radians(90));
+        arc (x,y,s,s,0,radians(90));
       }
       
       else {
-        arc(x+s,y,s,s,radians(90),radians(180));
+        arc (x+s,y,s,s,radians(90),radians(180));
       }
     }
   }
