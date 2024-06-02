@@ -30,7 +30,7 @@ function draw() {
     
   // pallini 
   for (var y=d/2; y<height; y+=d){ // ripetitore di riga
-    for(var x=d/2; x<=width; x+=d){ // generatore di riga
+    for (var x=d/2; x<=width; x+=d){ // generatore di riga
       r=map(x, d/2,width-d/2, 0,255);
       g=map(y, d/2,width-d/2, 0,255);
 
