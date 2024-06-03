@@ -1,50 +1,50 @@
-var colori=["#dfa0bf","#f9cb9c","#ffe599","#b6d7a8","#9fc5e8"];
-var q=10;
-var s;
-var m;
+var x=0;
+var y=0;
+var yg=0;
+var xr=0;
+var l=70;
+
+var dir=1;
+var v=5;
+
+var r=255;
+var g=255;
+var b=255;
+var col=true;
 
 function setup(){
-    ellipseMode (RADIUS);
+  createCanvas (500,500);
 
-    createCanvas(500,500);
-
-    noStroke();
-
-    s=width/q;
-
-    damiano();
+  noStroke ();
 }
+
 function draw(){ 
-  if (keyIsPressed){
-    if (key=='r'){
-      background(255); 
-      damiano();
-    }
-  } 
-}
+  background (255);
+  
+  fill (0,0,b);
+  rect (x,y, l,);
 
-function damiano(){
-  for (var y=0;y<height;y+=s){
-    for (var x=0;x<width;x+=s){
-      fill (random(colori));
+  fill (0,g,0);
+  rect (width/2-l/2,yg, l);
 
-      m=random(100);
+  fill (r,0,0);
+  rect (xr,height/2-l/2, l);
 
-      if (m<25){
-       arc (x+s,y+s,s,s,radians(180),radians(270));
-      }
+  x+=v*dir;
+  y+=v*dir;
+  yg+=v*dir;
+  xr+=v*dir;
 
-      else if (m<50){
-       arc (x,y+s,s,s,radians(270),radians(360));
-      }
-      
-      else if (m<75){
-        arc (x,y,s,s,0,radians(90));
-      }
-      
-      else {
-        arc (x+s,y,s,s,radians(90),radians(180));
-      }
-    }
+  if (yg<=0 || yg>=height-l){ // Se (yg arriva a 0 o se yg arriva ib basso)
+    dir=-dir;
+    col=!col;
+  }
+
+  if (col){
+    r=g=b=255;
+  }
+
+  else {
+    r=g=b=0;
   }
 }
