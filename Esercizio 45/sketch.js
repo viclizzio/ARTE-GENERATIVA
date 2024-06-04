@@ -13,6 +13,8 @@ var v=3;
 var q=20;
 var s;
 
+var pieno=true;
+
 function setup(){
   createCanvas (500,500);
 
@@ -25,7 +27,13 @@ function setup(){
 function draw(){ 
   background (0);
 
-  fill (r,g,b);
+  if (pieno){
+    fill (r,g,b);
+  }
+  else  {
+    noFill ();
+  }
+
   ellipse (x,y, d);
 
   if (st==0){
@@ -67,10 +75,16 @@ function draw(){
     }
   }
 
+  stroke (r,g,b);
+  strokeWeight (2);
+
   if (st==2 || st==3){
-    for (var i=0; i<q; i++){
-      stroke (r,g,b);
-      line (x,y, i*s,height)
+    for (var i=0; i<=q; i++){
+      line (x,y, i*s,height);
     }
   }
+}
+
+function mousePressed (){
+  pieno=!pieno;
 }
