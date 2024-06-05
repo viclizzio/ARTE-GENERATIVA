@@ -18,7 +18,7 @@ function draw(){
   
 
   for (var i=0; i<q; i++){
-    ellipse(x[i],y[i],d);
+    ellipse (x[i],y[i],d);
 
     if (a && y[i]<height-d/2){
       y[i]+=v;
